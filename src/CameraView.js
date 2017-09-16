@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Emoji from 'react-native-emoji';
 import Camera from 'react-native-camera';
 
-export default class DailyFruit extends Component {
+export default class CameraView extends Component {
   takePicture = () => {
     const options = {};
     //options.location = ...

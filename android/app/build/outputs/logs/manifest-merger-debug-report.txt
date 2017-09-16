@@ -26,6 +26,7 @@ MERGED from [com.facebook.react:react-native:0.47.2] /Users/andrekovac/dev/hacka
 		ADDED from /Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-sdk
 ADDED from /Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [AnAppleADay:react-native-vector-icons:unspecified] /Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/AnAppleADay/react-native-vector-icons/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [AnAppleADay:react-native-camera:unspecified] /Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/AnAppleADay/react-native-camera/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.47.2] /Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
