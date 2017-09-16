@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Emoji from 'react-native-emoji';
 
-import DailyFruit from './src/DailyFruit';
-
-export default class App extends Component {
+export default class DailyFruit extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <DailyFruit />
+        <Text style={{ fontSize: 150 }}>
+          <Emoji name="pineapple" />
+        </Text>
       </View>
     );
   }
