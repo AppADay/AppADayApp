@@ -5,11 +5,13 @@ import { Tabs, Tab, Icon } from 'react-native-elements';
 import CameraView from './src/CameraView';
 import LeaderBoard from './src/LeaderBoard';
 
+console.disableYellowBox = true;
+
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      selectedTab: 'profile',
+      selectedTab: 'cameraView',
     };
   }
 
@@ -25,7 +27,7 @@ export default class App extends Component {
           titleStyle={{ fontWeight: 'bold', fontSize: 10 }}
           selectedTitleStyle={{ marginTop: -1, marginBottom: 6 }}
           selected={selectedTab === 'cameraView'}
-          title={selectedTab === 'cameraView' ? 'CAMERA_VIEW' : null}
+          title={selectedTab === 'cameraView' ? 'CAMERA' : null}
           renderIcon={() => (
             <Icon
               containerStyle={{
@@ -34,12 +36,18 @@ export default class App extends Component {
                 marginTop: 12,
               }}
               color={'#5e6977'}
-              name="whatshot"
+              type="ionicon"
+              name="ios-camera-outline"
               size={33}
             />
           )}
           renderSelectedIcon={() => (
-            <Icon color={'#6296f9'} name="whatshot" size={30} />
+            <Icon
+              color={'#6296f9'}
+              type="ionicon"
+              name="ios-camera-outline"
+              size={30}
+            />
           )}
           onPress={() => this.changeTab('cameraView')}
         >
@@ -57,13 +65,19 @@ export default class App extends Component {
                 alignItems: 'center',
                 marginTop: 12,
               }}
+              type="octicon"
               color={'#5e6977'}
-              name="person"
+              name="list-ordered"
               size={33}
             />
           )}
           renderSelectedIcon={() => (
-            <Icon color={'#6296f9'} name="person" size={30} />
+            <Icon
+              color={'#6296f9'}
+              type="octicon"
+              name="list-ordered"
+              size={30}
+            />
           )}
           onPress={() => this.changeTab('leaderBoard')}
         >
