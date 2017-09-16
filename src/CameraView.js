@@ -5,6 +5,7 @@ import {
   View,
   Platform,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import Emoji from 'react-native-emoji';
 import Camera from 'react-native-camera';
@@ -96,12 +97,43 @@ export default class CameraView extends Component {
           aspect={Camera.constants.Aspect.fill}
           captureQuality={Camera.constants.CaptureQuality.low}
         >
-          <TouchableOpacity onPress={this.takePicture}>
-            <Text style={styles.capture}>
-              <Emoji name="pineapple" />
-            </Text>
-          </TouchableOpacity>
+          <View style={styles.buttonWrapper}>
+            <TouchableOpacity style={styles.button} onPress={this.takePicture}>
+              <View style={styles.buttonOuter}>
+                <View style={styles.buttonInner} />
+              </View>
+            </TouchableOpacity>
+          </View>
         </Camera>
+        <View style={styles.emojiBar}>
+          <Image
+            style={{ opacity: 0.6, width: 85, height: 85 }}
+            source={require('./../assets/pineapple.png')}
+          />
+          <Image
+            style={styles.fruit}
+            source={require('./../assets/apple.png')}
+          />
+          <Image
+            style={styles.fruit}
+            source={require('./../assets/banana.png')}
+          />
+          <Image
+            style={styles.fruit}
+            source={require('./../assets/pear.png')}
+          />
+          <Image
+            style={styles.fruit}
+            source={require('./../assets/orange.png')}
+          />
+        </View>
+        <View style={styles.challengeWrapper}>
+          <View style={styles.challengeTitle}>
+            <Image
+              source={require('./../assets/camera_TropicalChallenge.png')}
+            />
+          </View>
+        </View>
       </View>
     );
   }
@@ -111,10 +143,22 @@ const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
     flex: 1,
-    backgroundColor: '#fff',
 
     // alignItems: 'center',
     // justifyContent: 'center',
+  },
+  emojiBar: {
+    position: 'absolute',
+    top: 30,
+    left: 0,
+    right: 0,
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  fruit: {
+    width: 70,
+    height: 70,
+    opacity: 0.6,
   },
   preview: {
     flex: 1,
@@ -127,4 +171,37 @@ const styles = StyleSheet.create({
     margin: 40,
     fontSize: 160,
   },
+  buttonWrapper: {
+    alignItems: 'center',
+  },
+  button: {
+    position: 'absolute',
+    bottom: 70,
+  },
+  buttonOuter: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: '#ED7D7D',
+    borderRadius: 50,
+    width: 80,
+    height: 80,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonInner: {
+    width: 66,
+    height: 66,
+    borderRadius: 50,
+    borderWidth: 3,
+    borderColor: 'white',
+  },
+  challengeWrapper: {
+    position: 'absolute',
+    top: 130,
+    left: 0,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  challengeTitle: {},
 });

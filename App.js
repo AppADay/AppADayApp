@@ -43,10 +43,15 @@ export default class App extends Component {
           )}
           renderSelectedIcon={() => (
             <Icon
+              containerStyle={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 12,
+              }}
               color={'#6296f9'}
               type="ionicon"
               name="ios-camera-outline"
-              size={30}
+              size={33}
             />
           )}
           onPress={() => this.changeTab('cameraView')}
@@ -65,17 +70,17 @@ export default class App extends Component {
                 alignItems: 'center',
                 marginTop: 12,
               }}
-              type="octicon"
+              type="ionicon"
               color={'#5e6977'}
-              name="list-ordered"
+              name="ios-trophy"
               size={33}
             />
           )}
           renderSelectedIcon={() => (
             <Icon
               color={'#6296f9'}
-              type="octicon"
-              name="list-ordered"
+              type="ionicon"
+              name="ios-trophy"
               size={30}
             />
           )}
