@@ -2,3 +2,5 @@ node_modules/
 .expo/
 npm-debug.*
 jsconfig.json
+src/constants.js
+ios/build/

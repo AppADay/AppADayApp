@@ -165,6 +165,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/AnAppleADay/react-native-fs/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0c384814d8e9958d5135ab00cbcdbfd7dbe631f2">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/AnAppleADay-react-native-fs-unspecified_012dae856caa89092a1cee836c2ccf4289dcd43b.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/AnAppleADay/react-native-vector-icons/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"

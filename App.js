@@ -8,10 +8,11 @@ import LeaderBoard from './src/LeaderBoard';
 console.disableYellowBox = true;
 
 export default class App extends Component {
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
     this.state = {
       selectedTab: 'cameraView',
+      visionResult: null,
     };
   }
 
