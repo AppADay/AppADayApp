@@ -16,9 +16,6 @@ export default class DailyFruit extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{ fontSize: 150 }}>
-          <Emoji name="pineapple" />
-        </Text>
         <Camera
           ref={cam => {
             this.camera = cam;
@@ -27,7 +24,7 @@ export default class DailyFruit extends Component {
           aspect={Camera.constants.Aspect.fill}
         >
           <Text style={styles.capture} onPress={this.takePicture}>
-            [CAPTURE]
+            <Emoji name="pineapple" />
           </Text>
         </Camera>
       </View>
@@ -37,10 +34,12 @@ export default class DailyFruit extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    ...StyleSheet.absoluteFillObject,
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   preview: {
     flex: 1,
@@ -49,10 +48,8 @@ const styles = StyleSheet.create({
   },
   capture: {
     flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
     padding: 10,
     margin: 40,
+    fontSize: 160,
   },
 });
