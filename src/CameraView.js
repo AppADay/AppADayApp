@@ -207,7 +207,7 @@ export default class CameraView extends Component {
       }),
       Animated.timing(this.state.startFadeOut, {
         toValue: 1,
-        duration: 5000,
+        duration: 3000,
         easing: Easing.linear,
       }),
     ]).start();
