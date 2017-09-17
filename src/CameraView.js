@@ -8,6 +8,7 @@ import {
   Image,
   Animated,
   Easing,
+  InteractionManager,
 } from 'react-native';
 import Emoji from 'react-native-emoji';
 import Camera from 'react-native-camera';
@@ -105,6 +106,8 @@ export default class CameraView extends Component {
     rotateValue: new Animated.Value(0),
     translateValue: new Animated.ValueXY({ x: 0, y: 0 }), // 二维坐标
     fadeOutOpacity: new Animated.Value(0),
+    startFadeOut: new Animated.Value(0),
+    startMoveIn: new Animated.Value(0),
     resultImage: 'poo',
     isShowingResultImage: false,
     score: {
@@ -171,10 +174,10 @@ export default class CameraView extends Component {
             tension: 40, //maximal
           },
         ),
-        Animated.delay(500),
+        Animated.delay(1000),
         Animated.timing(this.state.rotateValue, {
           toValue: 1,
-          duration: 400, // defaut 500ms
+          duration: 600, // defaut 500ms
           easing: Easing.out(Easing.quad), // 一个用于定义曲线的渐变函数
         }),
         Animated.decay(
@@ -194,6 +197,22 @@ export default class CameraView extends Component {
     ]).start(() => this.setState({ isShowingResultImage: false })); // no cricle
   };
 
+  bannerAnimation = () => {
+    Animated.sequence([
+      Animated.timing(this.state.startMoveIn, {
+        toValue: 1,
+        duration: 2500,
+        easing: Easing.out(Easing.quad),
+        delay: 6000,
+      }),
+      Animated.timing(this.state.startFadeOut, {
+        toValue: 1,
+        duration: 5000,
+        easing: Easing.linear,
+      }),
+    ]).start();
+  };
+
   renderCheckMark = name =>
     this.state.score[name] ? (
       <Image
@@ -201,6 +220,12 @@ export default class CameraView extends Component {
         source={require('./../assets/checkmark.png')}
       />
     ) : null;
+
+  componentDidMount() {
+    // animation
+    InteractionManager.runAfterInteractions(() => setTimeout(() => {}, 2000));
+    this.bannerAnimation();
+  }
 
   render() {
     const { score } = this.state;
@@ -284,13 +309,29 @@ export default class CameraView extends Component {
             {this.renderCheckMark('orange')}
           </View>
         </View>
-        <View style={styles.challengeWrapper}>
+        <Animated.View
+          style={{
+            position: 'absolute',
+            top: this.state.startMoveIn.interpolate({
+              inputRange: [0, 1],
+              outputRange: [-70, 140],
+            }),
+            left: 0,
+            right: 0,
+            justifyContent: 'center',
+            alignItems: 'center',
+            opacity: this.state.startFadeOut.interpolate({
+              inputRange: [0, 1],
+              outputRange: [1, 0],
+            }),
+          }}
+        >
           <View style={styles.challengeTitle}>
             <Image
               source={require('./../assets/camera_TropicalChallenge.png')}
             />
           </View>
-        </View>
+        </Animated.View>
         {this.state.isShowingResultImage ? (
           <View
             style={{
