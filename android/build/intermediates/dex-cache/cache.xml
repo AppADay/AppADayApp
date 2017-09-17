@@ -21,15 +21,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_c74903a85bd8de70efeefb2df619fe946eb766a8.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
@@ -39,30 +30,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="576b5113887747a7592650ae14d980e1c57983c4">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.47.2_2bba3453229889961eb1f069216fdd1f5f7793ee.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
         <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_6aab2dd39d3aacc36510a28527dd735336ced109.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_81ff768de253bc12cd2bea8e607fb65aaa2e9530.jar" />
     </item>
     <item
         is-multidex="false"
@@ -84,15 +57,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="55615fa2582424e38705487d1d3969af8554f637">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_71534e49fc809bd857c6410f3737749f8783d12a.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -111,48 +75,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_6526aaaff94e48fd13fa1877988cabf23ffe7d33.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_73c46fc2b622f14b310cfc84f7183b8c7fa6d6bf.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
         <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_f5df51b567145c2cca361f4c3363794218ecb628.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_ed2726ef85b0b1811318c2cb739b12cb88f3f1fb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_846dcd4eb49fba41becb7b6fec643987ee84bfcb.jar" />
     </item>
     <item
         is-multidex="false"
@@ -174,15 +102,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/AnAppleADay/react-native-vector-icons/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/AnAppleADay-react-native-vector-icons-unspecified_4a968a3a8e8cb26dd36fd3674c2221e9c15458a9.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -201,30 +120,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/andrekovac/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_d4d8723bb83c709cc3794d8c4ba6cd7995d98c7f.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/AnAppleADay/react-native-camera/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="37c8f387911db73099ff0bdfc4d03c48a9d3dc06">
         <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/AnAppleADay-react-native-camera-unspecified_a95e9f23654c6f78b0f7983297ac2d2196d609f8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_e0a76a180419de10ef8a84e951688e4d69e250be.jar" />
     </item>
     <item
         is-multidex="false"
@@ -243,6 +144,105 @@
         revision="23.0.1"
         sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
         <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_f831cac0ab04ac6809ac81bb0d78742c2058aa8c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_c74903a85bd8de70efeefb2df619fe946eb766a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="576b5113887747a7592650ae14d980e1c57983c4">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.47.2_2bba3453229889961eb1f069216fdd1f5f7793ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_81ff768de253bc12cd2bea8e607fb65aaa2e9530.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_71534e49fc809bd857c6410f3737749f8783d12a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_6526aaaff94e48fd13fa1877988cabf23ffe7d33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_73c46fc2b622f14b310cfc84f7183b8c7fa6d6bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_ed2726ef85b0b1811318c2cb739b12cb88f3f1fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_846dcd4eb49fba41becb7b6fec643987ee84bfcb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/AnAppleADay/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/AnAppleADay-react-native-vector-icons-unspecified_4a968a3a8e8cb26dd36fd3674c2221e9c15458a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_d4d8723bb83c709cc3794d8c4ba6cd7995d98c7f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/andrekovac/dev/hackathons/13_201709_HackZurich2017/AnAppleADay/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_e0a76a180419de10ef8a84e951688e4d69e250be.jar" />
     </item>
 
 </items>

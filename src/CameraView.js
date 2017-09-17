@@ -131,6 +131,34 @@ export default class CameraView extends Component {
       .catch(err => console.error(err));
   };
 
+  sendLoserPost = () => {
+    return Promise.resolve()
+      .then(() =>
+        fetch(`http://be332e2a.ngrok.io/loser`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            // 'Accept': 'application/json',
+            // 'Access-Key': 'myAccessKey',  // use in future for safer requests
+          },
+          body: JSON.stringify({
+            email1: 'bla',
+          }),
+        }),
+      )
+      .then(response => response.json());
+  };
+
+  sendLoser = () => {
+    return Promise.resolve()
+      .then(() =>
+        fetch(`http://be332e2a.ngrok.io/loser`, {
+          method: 'GET',
+        }),
+      )
+      .then(response => response.json());
+  };
+
   showAnimation = resultArray => {
     const result = resultArray.length ? resultArray[0] : 'poo';
     const possibleFruits = Object.keys(fruits);
@@ -150,6 +178,8 @@ export default class CameraView extends Component {
     } else {
       // Shit animation
       this.setState({ resultImage: 'poo' }, this.startAnimation);
+      // send request out!
+      this.sendLoser();
     }
     return null;
   };
