@@ -6,6 +6,8 @@ import {
   Platform,
   TouchableOpacity,
   Image,
+  Animated,
+  Easing,
 } from 'react-native';
 import Emoji from 'react-native-emoji';
 import Camera from 'react-native-camera';
@@ -18,8 +20,23 @@ const fruits = {
   pineapple: require('./../assets/pineapple.png'),
   apple: require('./../assets/apple.png'),
   banana: require('./../assets/banana.png'),
+  ['banana family']: require('./../assets/banana.png'),
   pear: require('./../assets/pear.png'),
   orange: require('./../assets/orange.png'),
+  citrus: require('./../assets/orange.png'),
+  lemon: require('./../assets/orange.png'),
+  poo: require('./../assets/poo.png'),
+};
+
+const fruitMatch = {
+  pineapple: 'pineapple',
+  apple: 'apple',
+  banana: 'banana',
+  ['banana family']: 'banana',
+  pear: 'pear',
+  orange: 'orange',
+  citrus: 'orange',
+  lemon: 'orange',
 };
 
 const getRealImagePath = path => {
@@ -82,19 +99,23 @@ const filterResults = response => {
   return filtered.map(item => item.description);
 };
 
-const showAnimation = resultArray => {
-  const result = resultArray.length ? resultArray[0] : 'shitHappens';
-  const possibleFruits = Object.keys(fruits);
-  console.log({ resultArray, result, possibleFruits });
-  if (possibleFruits.includes(result)) {
-    // Hallo animation
-  } else {
-    // Shit animation
-  }
-  return null;
-};
-
 export default class CameraView extends Component {
+  state = {
+    bounceValue: new Animated.Value(0),
+    rotateValue: new Animated.Value(0),
+    translateValue: new Animated.ValueXY({ x: 0, y: 0 }), // 二维坐标
+    fadeOutOpacity: new Animated.Value(0),
+    resultImage: 'poo',
+    isShowingResultImage: false,
+    score: {
+      pineapple: false,
+      apple: false,
+      banana: false,
+      pear: false,
+      orange: false,
+    },
+  };
+
   takePicture = () => {
     const options = {};
     //options.location = ...
@@ -103,11 +124,87 @@ export default class CameraView extends Component {
       .then(data => retrieveBase64ImageFromStorage(data.path))
       .then(image => analyzeImage(image))
       .then(response => filterResults(response))
-      .then(filteredResults => showAnimation(filteredResults))
+      .then(filteredResults => this.showAnimation(filteredResults))
       .catch(err => console.error(err));
   };
 
+  showAnimation = resultArray => {
+    const result = resultArray.length ? resultArray[0] : 'poo';
+    const possibleFruits = Object.keys(fruits);
+    console.log({ resultArray, result, possibleFruits });
+    if (possibleFruits.includes(result)) {
+      // Fruit animation
+      this.setState(
+        {
+          resultImage: result,
+          score: {
+            ...this.state.score,
+            [fruitMatch[result]]: true,
+          },
+        },
+        this.startAnimation,
+      );
+    } else {
+      // Shit animation
+      this.setState({ resultImage: 'poo' }, this.startAnimation);
+    }
+    return null;
+  };
+
+  startAnimation = () => {
+    this.setState({ isShowingResultImage: true });
+    console.log({ state: this.state });
+
+    this.state.bounceValue.setValue(1.5); // 设置一个较大的初始值
+    this.state.rotateValue.setValue(0);
+    this.state.translateValue.setValue({ x: 10, y: 10 });
+    this.state.fadeOutOpacity.setValue(1);
+
+    Animated.sequence([
+      Animated.sequence([
+        Animated.spring(
+          //  the
+          this.state.bounceValue,
+          {
+            toValue: 0.8,
+            friction: 3, // defaut:7.
+            tension: 40, //maximal
+          },
+        ),
+        Animated.delay(500),
+        Animated.timing(this.state.rotateValue, {
+          toValue: 1,
+          duration: 400, // defaut 500ms
+          easing: Easing.out(Easing.quad), // 一个用于定义曲线的渐变函数
+        }),
+        Animated.decay(
+          //  S=vt-（at^2）/2   v=v - at
+          this.state.translateValue,
+          {
+            velocity: 100, // 起始速度，必填参数。
+            deceleration: 0.8, // 速度衰减比例，默认为0.997。
+          },
+        ),
+      ]),
+      Animated.timing(this.state.fadeOutOpacity, {
+        toValue: 0,
+        duration: 1000,
+        easing: Easing.linear, // 线性的渐变函数
+      }),
+    ]).start(() => this.setState({ isShowingResultImage: false })); // no cricle
+  };
+
+  renderCheckMark = name =>
+    this.state.score[name] ? (
+      <Image
+        style={styles.checkMark}
+        source={require('./../assets/checkmark.png')}
+      />
+    ) : null;
+
   render() {
+    const { score } = this.state;
+
     return (
       <View style={styles.container}>
         <Camera
@@ -127,14 +224,65 @@ export default class CameraView extends Component {
           </View>
         </Camera>
         <View style={styles.emojiBar}>
-          <Image
-            style={{ opacity: 0.6, width: 85, height: 85 }}
-            source={fruits.pineapple}
-          />
-          <Image style={styles.fruit} source={fruits.apple} />
-          <Image style={styles.fruit} source={fruits.banana} />
-          <Image style={styles.fruit} source={fruits.pear} />
-          <Image style={styles.fruit} source={fruits.orange} />
+          <View>
+            <Image
+              style={{
+                opacity: score.pineapple ? 1 : 0.6,
+                width: 80,
+                height: 80,
+                marginRight: 5,
+              }}
+              source={fruits.pineapple}
+            />
+            {this.renderCheckMark('pineapple')}
+          </View>
+          <View>
+            <Image
+              style={{
+                opacity: score.apple ? 1 : 0.6,
+                width: 75,
+                height: 75,
+                marginRight: 5,
+              }}
+              source={fruits.apple}
+            />
+            {this.renderCheckMark('apple')}
+          </View>
+          <View>
+            <Image
+              style={{
+                opacity: score.banana ? 1 : 0.6,
+                width: 70,
+                height: 70,
+                marginLeft: 15,
+              }}
+              source={fruits.banana}
+            />
+            {this.renderCheckMark('banana')}
+          </View>
+          <View>
+            <Image
+              style={{
+                opacity: score.pear ? 1 : 0.6,
+                width: 70,
+                height: 70,
+              }}
+              source={fruits.pear}
+            />
+            {this.renderCheckMark('pear')}
+          </View>
+          <View>
+            <Image
+              style={{
+                opacity: score.orange ? 1 : 0.6,
+                width: 70,
+                height: 70,
+                marginLeft: 5,
+              }}
+              source={fruits.orange}
+            />
+            {this.renderCheckMark('orange')}
+          </View>
         </View>
         <View style={styles.challengeWrapper}>
           <View style={styles.challengeTitle}>
@@ -143,6 +291,38 @@ export default class CameraView extends Component {
             />
           </View>
         </View>
+        {this.state.isShowingResultImage ? (
+          <View
+            style={{
+              ...StyleSheet.absoluteFillObject,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Animated.View
+              style={{
+                transform: [
+                  { scale: this.state.bounceValue }, // 缩放
+                  {
+                    rotate: this.state.rotateValue.interpolate({
+                      // 旋转，
+                      inputRange: [0, 1],
+                      outputRange: ['0deg', '180deg'],
+                    }),
+                  },
+                  { translateX: this.state.translateValue.x }, // x轴移动
+                  { translateY: this.state.translateValue.y }, // y轴移动
+                ],
+                opacity: this.state.fadeOutOpacity, // 透明度
+              }}
+            >
+              <Image
+                source={fruits[this.state.resultImage]}
+                style={{ width: 200, height: 200 }}
+              />
+            </Animated.View>
+          </View>
+        ) : null}
       </View>
     );
   }
@@ -213,4 +393,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   challengeTitle: {},
+  checkMark: {
+    position: 'absolute',
+    right: 20,
+    top: 10,
+    width: 55,
+    height: 55,
+  },
 });
