@@ -14,6 +14,14 @@ import idx from 'idx';
 
 import { VISION_API_KEY as API_KEY } from './constants';
 
+const fruits = {
+  pineapple: require('./../assets/pineapple.png'),
+  apple: require('./../assets/apple.png'),
+  banana: require('./../assets/banana.png'),
+  pear: require('./../assets/pear.png'),
+  orange: require('./../assets/orange.png'),
+};
+
 const getRealImagePath = path => {
   if (Platform.OS === 'ios') return path;
 
@@ -68,9 +76,22 @@ const blackList = [
 
 const filterResults = response => {
   const results = idx(response, _ => _.responses[0].labelAnnotations);
-  return results.filter(
+  const filtered = results.filter(
     result => !blackList.includes(result.description.toLowerCase()),
   );
+  return filtered.map(item => item.description);
+};
+
+const showAnimation = resultArray => {
+  const result = resultArray.length ? resultArray[0] : 'shitHappens';
+  const possibleFruits = Object.keys(fruits);
+  console.log({ resultArray, result, possibleFruits });
+  if (possibleFruits.includes(result)) {
+    // Hallo animation
+  } else {
+    // Shit animation
+  }
+  return null;
 };
 
 export default class CameraView extends Component {
@@ -82,7 +103,7 @@ export default class CameraView extends Component {
       .then(data => retrieveBase64ImageFromStorage(data.path))
       .then(image => analyzeImage(image))
       .then(response => filterResults(response))
-      .then(filteredResults => console.log({ filteredResults }))
+      .then(filteredResults => showAnimation(filteredResults))
       .catch(err => console.error(err));
   };
 
@@ -108,24 +129,12 @@ export default class CameraView extends Component {
         <View style={styles.emojiBar}>
           <Image
             style={{ opacity: 0.6, width: 85, height: 85 }}
-            source={require('./../assets/pineapple.png')}
+            source={fruits.pineapple}
           />
-          <Image
-            style={styles.fruit}
-            source={require('./../assets/apple.png')}
-          />
-          <Image
-            style={styles.fruit}
-            source={require('./../assets/banana.png')}
-          />
-          <Image
-            style={styles.fruit}
-            source={require('./../assets/pear.png')}
-          />
-          <Image
-            style={styles.fruit}
-            source={require('./../assets/orange.png')}
-          />
+          <Image style={styles.fruit} source={fruits.apple} />
+          <Image style={styles.fruit} source={fruits.banana} />
+          <Image style={styles.fruit} source={fruits.pear} />
+          <Image style={styles.fruit} source={fruits.orange} />
         </View>
         <View style={styles.challengeWrapper}>
           <View style={styles.challengeTitle}>
