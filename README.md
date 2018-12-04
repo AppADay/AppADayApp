@@ -21,8 +21,16 @@ Challenge yourself with different scenarios in which you have to eat a different
 
 3. If your task was to eat a banana 🍌 today, and you indeed at a banana, then the day is checked off for you! ✅
 
+## How to run the App
+
+1. Clone the repository
+2. Run `yarn` or `npm install` to install all dependencies.
+3. Start the packager with `yarn start` or `npm run start`.
+3. Install `react-native` on your system if needed and run `react-native run-ios` to run the app in the iOS simulator or `react-native run-android` to run it on an Android device or simulator.
 
 ## Technologies used 👩🏽‍💻
 
 * 👩🏻‍🔬[Google Vision API](https://cloud.google.com/vision/): Machine learning algorithms to detect objects in images.
 * 📲 [React Native](https://facebook.github.io/react-native/): A mobile app framework to create native iOS and Android apps.
+
+This project made it into the final of 25 projects out of about 155 total submissions at [HackZurich](https://digitalfestival.ch/en/HACK/) 2017.
